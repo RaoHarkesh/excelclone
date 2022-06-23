@@ -1,0 +1,240 @@
+:root {
+    --border-color: lightgray;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Robot", sans-serif;
+    font-size: 0.85rem;
+}
+
+.menutop {
+    height: 30px;
+    border-bottom: 0.5px solid var(--border-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+.calc {
+    height: 20px;
+    border-bottom: 0.5px solid var(--border-color);
+    display: flex;
+    align-items: center;
+
+}
+
+#formula {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 2px;
+}
+
+.cell-container {
+    height: calc(100vh - 120px);
+    background-color: aqua;
+    overflow: auto;
+    position: relative;
+    background-color: white;
+    
+}
+.active-sheet.sheet{
+    background-color: #ADCF9F;
+}
+
+
+.row {
+    display: flex;
+
+}
+
+.cell {
+    min-height: 20px;
+    width: 90px;
+    padding: 2px;
+    outline: none;
+    border-left: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.topleftcell {
+    border-right: 0.1px solid var(--border-color);
+    border-bottom: 0.1px solid var(--border-color);
+    height: 20px;
+    width: 40px;
+    background-color: #e4e0e0;
+    position: absolute;
+    z-index: 2;
+}
+
+.leftcol {
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    background-color: #e4e0e0;
+    z-index: 1;
+
+}
+
+.leftcolcells {
+    height: 20px;
+    width: 40px;
+    border-bottom: 0.1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toprow {
+    
+    display: flex;
+    position: absolute;
+    left: 40px;
+    background-color: #e4e0e0;
+    z-index: 1;
+}
+
+.toprowcells {
+    height: 20px;
+    width: 90px;
+    border-bottom: 0.1px solid var(--border-color);
+    border-right: 0.1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allcells {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+
+}
+
+#address {
+    text-align: center;
+    font-size: larger;
+    width: 50px;
+}
+.sheets-list{
+   
+    display: flex;
+   justify-content: center;
+   background-color: aqua;
+   height: 100%;
+}
+.pages{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #e4e0e0;
+    height: 30px;
+    border-bottom: 0.5px solid var(--border-color);
+    border-top: 0.5px solid var(--border-color);
+}
+.fa.fa-plus-square-o{
+    color: rgb(86, 202, 92);
+    cursor: pointer;
+
+}
+.add-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+}
+.sheet{
+     height: 100%;
+     width: 60px;
+     background-color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+}
+.font-style{
+    width: 150px;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.font{
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.active-cell{
+    border: 2px solid #ADCF9F;
+}
+.xlicon{
+    width: 100px;
+    height:100%;
+}
+.logo{
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 0.1px solid var(--border-color);
+}
+
+.active-fontstyle {
+    background-color: #ADCF9F;
+    opacity: 0.8;
+}
+.highlightedcol{
+    background-color: #acacac;
+}
+.highlightedrow{
+    background-color: #acacac;
+}
+.coloricon{
+    height: 80%;
+    cursor: pointer;
+}
+.textcolorlist{
+    width: 120px;
+    height:120px;
+    background-color: #bdceb6;
+    position: absolute;
+    top: 65px;
+    left: 145px;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
+.color{
+    width: 40%;
+    height:40%;
+    cursor: pointer;
+}
+.red{
+   background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+   background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.donotdisplay{
+    display: none;
+}
